@@ -1,0 +1,710 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body,html
+{
+  margin: 0px;
+  padding: 0%;
+}
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover
+{
+  color:rgb(72, 72, 242);
+  transition: 0.3ms;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 30px;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__title, 
+.section__subtitle {
+  text-align: center;
+}
+
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+@media screen and (max-width:800px) {
+  .header
+  {
+    width: 35%;
+  }
+  .janu{
+    margin-left: 5px;
+  }
+  
+  .ho{
+    margin-left: 5px;
+  }
+  
+  .ab{
+    margin-left: 5px;
+  }
+  
+  .ski{
+    margin-left: 5px;
+  }
+  
+  .ser{
+    margin-left: 5px;
+  }
+  
+  .port{
+    margin-left: 5px;
+  }
+  .cont{
+    margin-left: 5px;
+  }
+}
+/*==================== HOME ====================*/
+.first
+{
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+}
+.janu
+{  
+  display: inline-block;        
+  margin-left: 10%;
+  margin-bottom: 30px;
+}
+.ho
+{
+  display: inline-block;
+  margin-left: 10%;
+  color: grey;
+  width: fit-content;
+  height: fit-content;
+}
+.ab
+{
+  display: inline-block;
+  margin-left: 5%;
+  color: grey;
+  width: fit-content;
+  height: fit-content;
+}
+.ski
+{
+  display: inline-block;
+  margin-left: 5%;
+  color: grey;
+  width: fit-content;
+  height: fit-content;
+}
+.ser
+{
+  display: inline-block;
+  margin-left: 5%;
+  color: grey;
+  width: fit-content;
+  height: fit-content;
+}
+.port
+{
+  display: inline-block;
+  margin-left: 5%;
+  color: grey;
+  width: fit-content;
+  height: fit-content;
+}
+.cont
+{
+  display: inline-block;
+  margin-left: 5%;
+  color: grey;
+  width: fit-content;
+  height: fit-content;
+}
+.janu:hover,.ho:hover,.ab:hover,.cont:hover,.port:hover,.ski:hover,.ser:hover
+{
+  color:rgb(72, 72, 242);
+  transition: 0.3ms;
+}
+.linkedin
+{
+  width: 23%;
+  margin-top: 50px;
+}
+.github{
+  width: 15%;
+}
+.linkedin,.github
+{
+  cursor: pointer;
+  background: transparent;
+  background-color: aliceblue;
+}
+.linkedin:hover,.github:hover
+{
+  transition: 0.2ms;
+  background-color:rgba(115, 115, 243, 0.506);
+}
+.second
+{
+  display: grid;
+  grid-template-columns: max-content;
+}
+.sec{
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+}
+.third
+{
+  width: 100%;
+}
+.intro
+{
+  font-size: 48px;
+  width: 100%;
+}
+.mypic
+{
+  margin-left: 10%;
+  width: 70%;
+  height: min-content;
+  border-radius: 50%;
+}
+.con
+{
+  margin-top: 20px;
+  width: 130px;
+  border-radius: 6px;
+  color: aliceblue;
+  background-color: rgb(135, 192, 235);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  height: 40px;
+}
+.con:hover
+{
+  transition: 0.3ms;
+  background-color:blue;
+  color: aliceblue;
+}
+.scroll:hover
+{
+  transition: 0.2ms;
+}
+.homein
+{
+  display: flex;
+}
+.homemain
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  @media screen and (max-width:800px) {
+    
+  }
+@media screen and (max-width:800px) {
+  .sec{
+    margin-left: 5%;
+  margin-right: 5%;
+    display: flex;
+  flex-direction: column;
+  }
+  .secsub{
+    display: flex;
+    flex-direction: row;
+  }
+  .homein
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .mypic{
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 0%;
+    justify-content: center;
+  }
+  .intro{
+    font-size: 35px;
+  }
+  .third{
+    text-align: center;
+  }
+  .homemain
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  .section
+  {
+    padding: 0px;
+  }
+}
+/*==================== ABOUT ====================*/
+.abpic
+{
+  margin-left: 35%;
+  margin-top: 20px;
+  border-radius: 20%;
+}
+.absec
+{
+  display: flex;
+  flex-direction: row;
+  padding-top:5% ;
+}
+.web
+{
+  text-align: left;
+  margin-bottom: 5%;
+  width: 70%;
+  font-size: 100%;
+}
+.absecsub
+{
+  width: 100%;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width:800px) {
+  body {
+    width: fit-content;
+    max-width:fit-content;
+  }
+  .scrolldiv
+  {
+    justify-content:flex-start;
+  }
+  .aboutmain
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .absecsub
+  {
+    margin-left: 0px;
+  }
+  .absec
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .abpic
+  {
+    width: 60%;
+    margin-bottom: 30px;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  .proj
+  {
+    margin-left: 0%;
+    align-items: center;
+    text-align: center;
+  }
+  .comple
+  {
+    align-items: center;
+    text-align: center;
+    margin-left: 45%;
+  }
+  .web
+  {
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+  }
+}
+/*==================== SKILLS ====================*/
+.p
+{
+  font-size: 100%;
+}
+.container1
+{
+  background-color: rgba(186, 186, 241, 0.506);
+  border-radius: 15px;
+}
+.html
+{
+  background-color:rgb(135, 192, 235);
+  border-radius: 15px;
+  color: white;
+  padding: 1%;
+  width: 70%;
+  text-align: right;
+  font-size: 50%;
+}
+.skillmain
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.sub2
+{
+  margin-right: 10px;
+}
+.sub1
+{
+  margin-right: 8%;
+  margin-left: 10px;
+}
+.down:active
+{
+  transform: rotate(-180deg);
+}
+@media screen and (max-width:800px) 
+{
+  .sub1
+  {
+    margin-right: 20%;
+  }
+}
+/*==================== QUALIFICATION ====================*/
+.education
+{
+  fill: skyblue;
+  color: skyblue;
+}
+.education:hover
+{
+  color: blue;
+  transition: 0.2ms;
+}
+.education:active
+{
+  transition: 0.2ms;
+  color: blueviolet;
+}
+.qualisec
+{
+  justify-content:space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+.bar{
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.dotdiv
+{
+  width: 8px;
+  align-items:flex-start;
+  display: inline-block;
+  height: 8px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+.qualidetails1
+{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: fit-content;
+  margin: 0px;
+  padding: 0%;
+  margin-left: 100px;
+}
+.qualidetails2
+{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: fit-content;
+  margin: 0px;
+  padding: 0%;
+  margin-right: 100px;
+}
+.rounder
+{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: blueviolet;
+  border-radius: 50%;
+}
+@media screen and (max-width:800px) {
+  .qualidetails1
+  {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+  .qualidetails2
+  {
+    margin-right: 20px;
+  }
+  .q
+  {
+    font-size: 15px;
+  }
+  .qualisec
+  {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+/*==================== SERVICES ====================*/
+.servicemain
+{
+  display: flex;
+  flex-direction: row;
+}
+.butser1,.butser2
+{
+  width: 35%;
+  height: 100%;
+  border-width: 0.3px;
+  border-color: skyblue;
+  border-radius: 5px;
+  box-shadow: 2px;
+  background-color: rgba(234, 244, 253, 0.449);
+}
+.butser1:hover,.butser2:hover{
+  transition: 0.2ms;
+  box-shadow:0.2rem;
+  box-shadow: rgba(128, 128, 128, 0.301);
+  background-color: white;
+  transform: rotate3d(30deg);
+}
+/*==================== PORTFOLIO ====================*/
+.contsec
+{
+  background-color:rgb(135, 192, 235);
+  width: 60%;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+.portsub1
+{
+  margin-left: 30px;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+}
+.buttoncont
+{
+  margin-top: 20px;
+  width: 130px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  height: 40px;
+}
+.buttoncont:hover
+{
+  background-color: blue;
+  transition: 0.2ms;
+}
+.portpic
+{
+  width: 40%;
+  border-radius: 10px;
+}
+/*==================== CONTACT ME ====================*/
+
+.contmain
+{
+  display: flex;
+  flex-direction: row;
+}
+.contsub1
+{
+  margin-left: 10%;
+  display: flex;
+  width: 40%;
+  margin-right: 5px;
+  flex-direction:column ;
+}
+.contsub2
+{
+  display: flex;
+  margin-right: 5px;
+  width: 40%;
+  flex-direction:column ;
+}
+.contsub3
+{
+  display: flex;
+  margin-right: 10%;
+  flex-direction:column ;
+}
+input
+{
+  width: 100%;
+  background-color:rgba(165, 105, 221, 0.304);
+  border: none;
+  color:black;
+  height: 50px;
+  font-size: 18px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+textarea
+{
+  cursor: pointer;
+  width: 100%;
+  background-color:rgba(165, 105, 221, 0.304);
+  border: none;
+  color:black;
+  height: 140px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.inputstyle
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+}
+@media screen and (max-width:800px) {
+  .contsub1{
+    margin-left: 10%;
+  }
+  .inputstyle
+  {margin-left: 0%;
+    margin-left: 5%;
+  }
+}
